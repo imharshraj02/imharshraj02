@@ -21,7 +21,9 @@ int partition_function(int arr[], int l, int h)
 void quick_sort(int arr[], int l, int h)  
 {  if (l < h)  
  	{  
- 	 	int p_index = partition_function(arr, l, h);   	 	quick_sort(arr, l, p_index - 1);   	 	quick_sort(arr, p_index + 1, h);  
+ 	 	int p_index = partition_function(arr, l, h);   	 
+ quick_sort(arr, l, p_index - 1);   
+ quick_sort(arr, p_index + 1, h);  
  	}  
 }  
  
@@ -29,19 +31,26 @@ void quick_sort(int arr[], int l, int h)
 void print_Array(int arr[], int len)  
 {  
  	int i;  
- 	for (i=0; i < len; i++)   	 	printf("%d ", arr[i]);   
+ 	for (i=0; i < len; i++)   
+   printf("%d ", arr[i]);   
 }  
  
 int main()  
 {  
  	int n,i; 
- 	printf("Enter the size of the array :"); scanf("%d",&n); 
- 	int arr[n];  	printf("Enter %d elements in an array :",n);  	for(i=0;i<n;i++) 
+ 	printf("Write the size of the  Array:");
+ scanf("%d",&n); 
+ 	int arr[n];  
+ printf("Enter %d elements in an array :",n);  	for(i=0;i<n;i++) 
  	{ 
  	 	scanf("%d",&arr[i]); 
  	} 
- 	printf("Elements before Sorting: ");  	print_Array(arr, n);  	printf("\n");  	printf("After Sorting the array: "); 
+ 	printf("Elements before Sorting: "); 
+ print_Array(arr, n);
+ printf("\n");  
+ printf("See the sorted Array: "); 
     quick_sort(arr, 0, n-1);  
- 	print_Array(arr, n);   	return 0;  
+ 	print_Array(arr, n);  
+ return 0;  
 } 
 
