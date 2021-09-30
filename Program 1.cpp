@@ -1,4 +1,5 @@
 #include<stdio.h>  
+#include<conio.h>
 void swap_elements(int* first, int* second)  
 {  
  	int temp = *first;   	*first = *second;   	*second = temp;  
@@ -32,7 +33,7 @@ void print_Array(int arr[], int len)
 {  
  	int i;  
  	for (i=0; i < len; i++)   
-   printf("%d ", arr[i]);   
+   printf(" jhinku %d ", arr[i]);   
 }  
  
 int main()  
